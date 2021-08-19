@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import SignIn from './Components/SignIn';
+import SignUp from './Components/SignUp';
+import Login from './Components/Login';
+import styled from 'styled-components';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+
+const AppWrapper = styled.div`
+	min-height: 100vh;
+	background: #000;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const remember = JSON.parse(localStorage.getItem('remember'));
+	console.log(remember);
+	return (
+		<AppWrapper>
+			<Router>
+				<Switch>
+					<Route exact path="/">
+						{remember ? <Redirect to="/login" /> : <Redirect to="/sign-in" />}
+					</Route>
+					<Route path="/sign-up" component={SignUp} />
+					<Route path="/sign-in" component={SignIn} />
+					<Route path="/login" component={Login} />
+				</Switch>
+			</Router>
+
+			{/* <SignUp /> */}
+		</AppWrapper>
+	);
 }
 
 export default App;
