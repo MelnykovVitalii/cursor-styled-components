@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cursor-styled-components/static/css/main.0385f92f.chunk.css",
-    "main.js": "/cursor-styled-components/static/js/main.8ac9240a.chunk.js",
-    "main.js.map": "/cursor-styled-components/static/js/main.8ac9240a.chunk.js.map",
+    "main.css": "/cursor-styled-components/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/cursor-styled-components/static/js/main.212b2487.chunk.js",
+    "main.js.map": "/cursor-styled-components/static/js/main.212b2487.chunk.js.map",
     "runtime-main.js": "/cursor-styled-components/static/js/runtime-main.d05a9468.js",
     "runtime-main.js.map": "/cursor-styled-components/static/js/runtime-main.d05a9468.js.map",
     "static/js/2.bb93e444.chunk.js": "/cursor-styled-components/static/js/2.bb93e444.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.fb3ad446.chunk.js": "/cursor-styled-components/static/js/3.fb3ad446.chunk.js",
     "static/js/3.fb3ad446.chunk.js.map": "/cursor-styled-components/static/js/3.fb3ad446.chunk.js.map",
     "index.html": "/cursor-styled-components/index.html",
-    "static/css/main.0385f92f.chunk.css.map": "/cursor-styled-components/static/css/main.0385f92f.chunk.css.map",
+    "static/css/main.ea1455b2.chunk.css.map": "/cursor-styled-components/static/css/main.ea1455b2.chunk.css.map",
     "static/js/2.bb93e444.chunk.js.LICENSE.txt": "/cursor-styled-components/static/js/2.bb93e444.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d05a9468.js",
     "static/js/2.bb93e444.chunk.js",
-    "static/css/main.0385f92f.chunk.css",
-    "static/js/main.8ac9240a.chunk.js"
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.212b2487.chunk.js"
   ]
 }
