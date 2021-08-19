@@ -16,22 +16,18 @@ const AppWrapper = styled.div`
 `;
 
 function App() {
-	const remember = JSON.parse(localStorage.getItem('remember'));
-	console.log(remember);
 	return (
 		<AppWrapper>
 			<Router basename="/cursor-styled-components">
 				<Switch>
 					<Route exact path="/">
-						{remember ? <Redirect to="/login" /> : <Redirect to="/sign-in" />}
+						<Redirect to="/sign-in" />
 					</Route>
 					<Route path="/sign-up" component={SignUp} />
 					<Route path="/sign-in" component={SignIn} />
 					<Route path="/login" component={Login} />
 				</Switch>
 			</Router>
-
-			{/* <SignUp /> */}
 		</AppWrapper>
 	);
 }

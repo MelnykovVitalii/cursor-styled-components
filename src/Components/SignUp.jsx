@@ -58,7 +58,6 @@ function SignUp() {
 				password: password,
 			};
 			localStorage.setItem('user', JSON.stringify(user));
-			console.log(localStorage.getItem('user'));
 			history.push('/login');
 		}
 	};

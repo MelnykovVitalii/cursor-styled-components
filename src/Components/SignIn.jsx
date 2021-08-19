@@ -30,6 +30,7 @@ function SignIn() {
 
 	const handleSignIn = () => {
 		if (storage.email === email && storage.password === password) {
+			console.log('signin');
 			localStorage.setItem('remember', rememberMe);
 			history.push('/login');
 		}
@@ -65,6 +66,15 @@ function SignIn() {
 		}
 	}, [password, email]);
 
+	useEffect(() => {
+		const remember = JSON.parse(localStorage.getItem('remember'));
+		if (remember && storage?.email && storage?.password) {
+			setEmail(storage.email);
+			setPassword(storage.password);
+			setRememberMe(remember);
+		}
+	}, []);
+
 	return (
 		<Wrapper>
 			<FlexWrapper>
@@ -81,6 +91,7 @@ function SignIn() {
 						onChange={handleEmailChange}
 						type="text"
 						placeholder="Email Adress *"
+						value={email ?? ''}
 					/>
 					<Input
 						onChange={handlePasswordChange}
@@ -88,6 +99,7 @@ function SignIn() {
 						isInitialPassword={password === null}
 						isPasswordCorrect={isPasswordCorrect}
 						placeholder="Password *"
+						value={password ?? ''}
 					/>
 					<LabelForCheckbox>
 						<CheckBox onChange={handleCheckboxChange} type="checkbox" checked={rememberMe} />
