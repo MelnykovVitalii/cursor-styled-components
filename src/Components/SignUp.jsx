@@ -59,8 +59,8 @@ function SignUp() {
 			};
 			localStorage.setItem('user', JSON.stringify(user));
 			console.log(localStorage.getItem('user'));
+			history.push('/login');
 		}
-		history.push('/login');
 	};
 
 	useEffect(() => {
