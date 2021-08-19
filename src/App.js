@@ -22,7 +22,7 @@ function App() {
 		<AppWrapper>
 			<Router basename="/cursor-styled-components">
 				<Switch>
-					<Route exact path="/">
+					<Route exact path="/cursor-styled-components">
 						{remember ? <Redirect to="/login" /> : <Redirect to="/sign-in" />}
 					</Route>
 					<Route path="/sign-up" component={SignUp} />
