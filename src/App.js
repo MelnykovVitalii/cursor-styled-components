@@ -20,7 +20,7 @@ function App() {
 	console.log(remember);
 	return (
 		<AppWrapper>
-			<Router>
+			<Router basename="/cursor-styled-components">
 				<Switch>
 					<Route exact path="/">
 						{remember ? <Redirect to="/login" /> : <Redirect to="/sign-in" />}
